@@ -7,17 +7,18 @@ source ./_init_variables.sh
 
 # Check for minikube
 if ! command -v minikube &> /dev/null; then
-    echo "Could not find minikube on machine. Please install it first."
+    echo "Could not find minikube on machine. install it first."
     exit 100
 fi
 
 # Check for kubectl
 if ! command -v kubectl &> /dev/null; then
-    echo "Could not find kubectl on machine. Please install it first."
+    echo "Could not find kubectl on machine. install it first."
     exit 101
 fi
 
 # Set the appropriate VM driver based on the operating system
+# if running on MacOS then use hyperkit virtualizator
 case "$(uname -s)" in
    Darwin*)
      minikube config set vm-driver hyperkit
