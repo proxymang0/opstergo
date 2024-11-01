@@ -1,8 +1,7 @@
 # opstergo
 Redis HA Kubernetes Setup with Minikube
 set of scripts for deploying a (HA) Redis master-slave setup in Kubernetes using Minikube. 
-
-need to have minikube and kubectl pre installed.
+Need to have minikube and kubectl pre installed.
 
 01-minikube-up.sh - Initializes Minikube with two nodes.
 
